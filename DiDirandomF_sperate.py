@@ -47,21 +47,21 @@ num_ = 0
 tt = 2369
 LF = 1000
 
-with open('didi_train_data_w_t.csv', 'rb') as csvfile:
+with open('.data/didi_train_data_w_t.csv', 'rb') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     for row in spamreader:
         row = row[0].split(',')
         row = [int(i) for i in row ]    
         sample.append(row)
 
-with open('didi_train_label.csv', 'rb') as csvfile:
+with open('.data/didi_train_label.csv', 'rb') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     for lable in spamreader:
         lable = lable[0].split(',')
         lable = [ int(i) for i in lable]
         responses.append(lable)
 
-with open('best_weights12.csv', 'rb') as csvfile:
+with open('.data/best_weights12.csv', 'rb') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     for lable in spamreader:
         lable = lable[0].split(',')
