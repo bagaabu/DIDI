@@ -9,7 +9,7 @@ import csv
 
 weather = []
 
-with open('.data/Weather_table.csv', 'rb') as csvfile:
+with open('./data/Weather_table.csv', 'rb') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
     for row in spamreader:
         row = row[0].split(',')
